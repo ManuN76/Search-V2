@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Glide Yes-Code</title>
+</head>
+<div>
+  <span id="result"></span>
+</div>
+<script src="function.js"></script>
+<script src="driver.js"></script>
+
+
+<script>
+   // TEST DEBUG !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   testDebug();
+
+async function testDebug() {
+
+  ////// LE DEBUG NE FONCTIONNE PAS : PBL REGEX ???!!!???
+  
+let st = { type: "string", value: `chaîne source` };
+let sep = { type: "string", value: "" };  // Separator Caractere
+let esc = { type: "string", value: '' };  // Escape Caracteres
+let search = { type: "string", value: 'chai' }; // Search
+let upper = { type: "boolean", value: false }; // Option Uppercase Sensitive (1 actif)
+let accent = { type: "boolean", value: true }; // Option Ignore Accent (1 actif)
+let word = { type: "boolean", value: false }; // Option Word (1 actif)
+
+let result = await window.function(st, sep, esc, search, upper, accent, word);
+document.getElementById("result").innerHTML = result;
+
+}
+</script>
+</body>
+
+</html>
